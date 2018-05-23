@@ -17,7 +17,6 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -30,7 +29,7 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
         //create an array of words.
-        ArrayList<String> words = new ArrayList<String>();
+        ArrayList<String> words = new ArrayList<>();
         words.add("one");
         words.add("two");
         words.add("three");
@@ -41,17 +40,22 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("eight");
         words.add("nine");
         words.add("ten");
-
-        LinearLayout rootView=(LinearLayout)findViewById(R.id.root_view);
-        TextView wordView = new TextView(this);
-        wordView.setText(words.get(0));
-        rootView.addView(wordView);
-        TextView wordView2 = new TextView(this);
-        wordView2.setText(words.get(1));
-        rootView.addView(wordView2);
-        TextView wordView3 = new TextView(this);
-        wordView3.setText(words.get(2));
-        rootView.addView(wordView3);
+        //access root view
+        LinearLayout rootView=findViewById(R.id.root_view);
+       //add 10 TV with text as words.
+        /*int i=0;
+        while(i<words.size()){
+            TextView newWord = new TextView(this);
+            newWord.setText(words.get(i));
+            rootView.addView(newWord);
+            i++;
+        }*/
+        for(int i=0;i<words.size();i++){
+            TextView newWord = new TextView(this);
+            newWord.setText(words.get(i));
+            rootView.addView(newWord);
+            i++;
+        }
 
 
 
