@@ -24,5 +24,4 @@
     tools:context="com.example.android.miwok.NumbersActivity"
     android:orientation="vertical"
     android:id="@+id/list">
-
 </ListView>
