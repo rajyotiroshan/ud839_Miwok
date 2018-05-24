@@ -17,7 +17,9 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -40,8 +42,18 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("eight");
         words.add("nine");
         words.add("ten");
+        words.add("eleven");
+        words.add("twelve");
+        words.add("thirteen");
+        words.add("fourteen");
+        words.add("fifteen");
+        words.add("sixteen");
+        words.add("seventeen");
+        words.add("eighteen");
+        words.add("nineteen");
+        words.add("twenty");
         //access root view
-        LinearLayout rootView=findViewById(R.id.root_view);
+        //LinearLayout rootView=findViewById(R.id.root_view);
        //add 10 TV with text as words.
         /*int i=0;
         while(i<words.size()){
@@ -50,12 +62,12 @@ public class NumbersActivity extends AppCompatActivity {
             rootView.addView(newWord);
             i++;
         }*/
-        for(int i=0;i<words.size();i++){
-            TextView newWord = new TextView(this);
-            newWord.setText(words.get(i));
-            rootView.addView(newWord);
-            i++;
-        }
+        /*
+
+         */
+        ArrayAdapter<String> iteamsAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,words);
+        ListView listView = findViewById(R.id.list);
+        listView.setAdapter(iteamsAdapter);
 
 
 
