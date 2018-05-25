@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
         ColorsTV.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "a click on Colors", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),ColorsActivity.class);
+                startActivity(intent);
             }
         });
         //set on click event on Phrases.
