@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
         FMTv.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "a click on Family members", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),FamilyActivity.class);
+                startActivity(intent);
             }
         });
         //set event on colors.
