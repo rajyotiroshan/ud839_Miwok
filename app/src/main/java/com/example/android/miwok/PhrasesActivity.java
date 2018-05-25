@@ -17,12 +17,37 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class PhrasesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_phrases);
+        setContentView(R.layout.words_list);
+        //ArrayList of Word
+        ArrayList<Word> phrases = new ArrayList<>();
+        //add phrases in Arraylist
+        phrases.add(new Word("minto wuksus","Where are you?"));
+        phrases.add(new Word("tinne oyaase'ne","What is your name?"));
+        phrases.add(new Word("oyaaset","My name is..."));
+        phrases.add(new Word("How are you feeling?","michekses"));
+
+        phrases.add(new Word("I'm feeling good.","kuchi achit"));
+        phrases.add(new Word("Are you coming?","eenes'aa?"));
+        phrases.add(new Word("Yes,I'm coming.","hee'eenem"));
+        phrases.add(new Word("I'm coming.","eenem"));
+
+        phrases.add(new Word("Let's go","yoowutis"));
+        phrases.add(new Word("come here.","enninem"));
+        phrases.add(new Word("ki hal?","How are you??"));
+        phrases.add(new Word("kata gel chhela?","where had you gone?"));
+        //adapter
+        WordAdapter adapter = new WordAdapter(this,phrases);
+        //Adpterview
+        ListView listView = findViewById(R.id.list);
+        listView.setAdapter(adapter);
     }
 }

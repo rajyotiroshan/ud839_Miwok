@@ -30,20 +30,21 @@ public class NumbersActivity extends AppCompatActivity {
         //create an array of words.
         ArrayList<Word> words = new ArrayList<>();
         words.add(new Word("lutti","one"));
-        words.add(new Word("","three"));
-        words.add(new Word("","four"));
-        words.add(new Word("","five"));
-        words.add(new Word("","six"));
-        words.add(new Word("","seven"));
-        words.add(new Word("","eight"));
-        words.add(new Word("","nine"));
-        words.add(new Word("","ten"));
-        words.add(new Word("","eleven"));
-        words.add(new Word("","twelve"));
-        words.add(new Word("","thirteen"));
-        words.add(new Word("","fourteen"));
-        words.add(new Word("","fifteen"));
-        words.add(new Word("","sixteen"));
+        words.add(new Word("otiiko","two"));
+        words.add(new Word("tolookosu","three"));
+        words.add(new Word("oyyiso","four"));
+        words.add(new Word("massokko","five"));
+        words.add(new Word("temmokko","six"));
+        words.add(new Word("kenekaku","seven"));
+        words.add(new Word("kawinta","eight"));
+        words.add(new Word("wo'e","nine"));
+        words.add(new Word("na'aacha","ten"));
+        words.add(new Word("egyarah","eleven"));
+        words.add(new Word("barah","twelve"));
+        words.add(new Word("terah","thirteen"));
+        words.add(new Word("chaudah","fourteen"));
+        words.add(new Word("pandrah","fifteen"));
+        words.add(new Word("solah","sixteen"));
         //access root view
         //LinearLayout rootView=findViewById(R.id.root_view);
        //add 10 TV with text as words.

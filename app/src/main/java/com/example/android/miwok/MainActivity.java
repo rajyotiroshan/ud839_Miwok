@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
         PhrasesTv.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "a click on Phrases", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),PhrasesActivity.class);
+                startActivity(intent);
             }
         });
 
