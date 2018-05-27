@@ -1,9 +1,12 @@
 package com.example.android.miwok;
 
 public class Word {
+    private final int IMG_NOT_AVAILABLE = -1;
+    //member variable
     private String mMiwokTranslation;
     private String mDefaultTranslation;
-    private  int mImgResourceID;
+    private  int mImgResourceID = IMG_NOT_AVAILABLE;
+
     //constructor.
     public Word(String miwok,String english){
         mMiwokTranslation =miwok;
@@ -32,5 +35,12 @@ public class Word {
      */
     public int getImgResourceID(){
         return mImgResourceID;
+    }
+    /**
+     * @return true if imges provided else false
+     */
+    public boolean hasImage(){
+        return mImgResourceID != IMG_NOT_AVAILABLE;
+
     }
 }
