@@ -30,16 +30,16 @@ public class FamilyActivity extends AppCompatActivity {
         //create ArrayList of Word
         ArrayList<Word> words = new ArrayList<>();
         //populate word object.
-        words.add(new Word("epe","father"));
-        words.add(new Word("eta","mother"));
-        words.add(new Word("angsi","son"));
-        words.add(new Word("tune","daughter"));
-        words.add(new Word("taachi","older brother"));
-        words.add(new Word("chaliti","younger brother"));
-        words.add(new Word("tete","older sister"));
-        words.add(new Word("koliti","younger sister"));
-        words.add(new Word("amo","grandmother"));
-        words.add(new Word("paapa","grandfather"));
+        words.add(new Word("epe","father",R.drawable.family_father));
+        words.add(new Word("eta","mother",R.drawable.family_mother));
+        words.add(new Word("angsi","son",R.drawable.family_son));
+        words.add(new Word("tune","daughter",R.drawable.family_daughter));
+        words.add(new Word("taachi","older brother",R.drawable.family_older_brother));
+        words.add(new Word("chaliti","younger brother",R.drawable.family_younger_brother));
+        words.add(new Word("tete","older sister",R.drawable.family_older_sister));
+        words.add(new Word("koliti","younger sister",R.drawable.family_younger_sister));
+        words.add(new Word("amo","grandmother",R.drawable.family_grandmother));
+        words.add(new Word("paapa","grandfather",R.drawable.family_grandfather));
         //An wordAdapter with words
         WordAdapter adapter = new WordAdapter(this,words);
         ListView listView = findViewById(R.id.list);
